@@ -15,7 +15,6 @@ class ApiTester:
 
     def fetch_tokens(self):
         """Fetches access and refresh JWT tokens from api
-
         Returns:
             tuple: access,refresh
         """
@@ -35,7 +34,6 @@ class ApiTester:
     def get_all(self):
         """get list of all resources from api
         Usage: python api_tester.py get_all
-
         Returns: JSON
         """
         access_token = self.fetch_tokens()[0]
@@ -52,10 +50,8 @@ class ApiTester:
 
     def get_one(self, id):
         """get 1 resource by id from api
-
         Usage:
         python api_tester.py get_one 1
-
         Returns: JSON
         """
         access_token = self.fetch_tokens()[0]
@@ -73,11 +69,9 @@ class ApiTester:
     # TODO adjust parameter names to match API
     def create(self, name, description=None, owner=None):
         """creates a resource in api
-
         Usage:
         python api_tester.py create /
             --name=required --description=optional --owner=optional
-
         Returns: JSON
         """
 
@@ -101,11 +95,9 @@ class ApiTester:
 
     def update(self, id, name=None, description=None, owner=None):
         """updates a resource in api
-
         Usage:
         python api_tester.py update 1 /
             --name=optional --description=optional --owner=optional
-
         Returns: JSON
         """
 
@@ -131,10 +123,8 @@ class ApiTester:
 
     def delete(self, id):
         """deletes a resource in api
-
         Usage:
         python api_tester.py delete 1
-
         Returns: Empty string if no error
         """
 
